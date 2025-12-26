@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+@import "tailwindcss";
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.main-title {
+  @apply px-3 max-sm:px-3 py-3.5 font-bold text-zinc-700 max-sm:text-[1.05rem] text-2xl max-sm:text-left text-center;
+}
+
+.delete-all-btn {
+  @apply top-3 max-sm:top-3 right-3 max-sm:right-2 z-10 absolute px-4 max-sm:px-3 py-2 max-sm:py-1 font-medium text-zinc-400 hover:text-red-50 text-sm transition-all duration-300 border border-red-200 rounded-md bg-white hover:bg-red-600 cursor-pointer select-none;
+}
+
+.form-container {
+  @apply p-2;
+}
+
+.no-expenses {
+  @apply w-full px-24 max-sm:px-4 py-24 text-center;
+}
+
+.no-expenses p {
+  @apply font-semibold text-zinc-400 text-3xl;
+}
+
+.form-container form {
+  @apply justify-items-stretch items-end gap-3 max-sm:gap-5 grid grid-cols-[2fr_2fr_2fr_2fr_1fr] max-sm:grid-cols-1 max-lg:grid-cols-2 max-w-[1200px] mx-auto p-3;
+}
+
+.form-container label {
+  @apply block mb-1 ml-1 font-semibold text-zinc-500 text-sm;
+}
+
+.form-field input,
+.form-field select {
+  @apply w-full px-4 py-2 max-md:text-sm border-2 border-zinc-300 focus:border-blue-700 rounded-md outline-none focus:shadow-md/30;
+}
+
+.form-container button {
+  @apply max-sm:col-span-1 max-lg:col-span-2 w-full max-w-48 mx-auto px-4 py-2 font-semibold text-white transition-all duration-300 border rounded-md bg-blue-600 hover:bg-blue-800 cursor-pointer;
+}
+
+.total-expenses {
+  @apply p-3;
+}
+
+.total-expenses h1 {
+  @apply font-bold text-xl text-center;
+}
+
+.expense-header-row {
+  @apply max-md:hidden justify-items-start items-center grid grid-cols-[2fr_2fr_2fr_2fr_1fr] max-w-[1200px] mx-auto px-4 py-3 md:rounded-t-xl bg-blue-200;
+}
+
+.expense-header-row span {
+  @apply font-bold max-lg:text-sm;
+}
+
+.expense-data-row {
+  @apply justify-items-start items-center grid grid-cols-[2fr_2fr_2fr_2fr_1fr] max-md:grid-cols-1 max-w-[1200px] mx-auto px-4 py-2 md:rounded-xl;
+}
+
+.expense-data-row span {
+  @apply flex justify-between items-center max-md:w-full font-medium max-lg:text-sm;
+}
+
+.expense-data-row button {
+  @apply px-4 max-sm:px-3 py-2 max-sm:py-1 font-medium text-red-400 hover:text-black focus:text-black active:text-black text-sm transition-all duration-300 border border-red-200 hover:border-red-500 focus:border-red-500 active:border-red-500 rounded-md bg-white hover:bg-red-200 cursor-pointer;
+}
+
+.expense-list {
+  @apply max-w-[1200px] max-md:max-w-100 overflow-hidden mx-auto max-md:my-4;
+}
+
+.expense-list:nth-child(even) {
+  @apply md:overflow-hidden bg-zinc-50 max-md:bg-white;
+}
+
+.expense-data-row .header-for-mobile {
+  @apply hidden max-md:inline max-md:py-3 font-bold;
+}
